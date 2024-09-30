@@ -1,0 +1,15 @@
+C:\Users\user\source\repos\crud\crud\bin\Debug\crud.exe.config
+C:\Users\user\source\repos\crud\crud\bin\Debug\crud.exe
+C:\Users\user\source\repos\crud\crud\bin\Debug\crud.pdb
+C:\Users\user\source\repos\crud\crud\obj\Debug\crud.csproj.AssemblyReference.cache
+C:\Users\user\source\repos\crud\crud\obj\Debug\MainWindow.g.cs
+C:\Users\user\source\repos\crud\crud\obj\Debug\App.g.cs
+C:\Users\user\source\repos\crud\crud\obj\Debug\crud_MarkupCompile.cache
+C:\Users\user\source\repos\crud\crud\obj\Debug\crud_MarkupCompile.lref
+C:\Users\user\source\repos\crud\crud\obj\Debug\MainWindow.baml
+C:\Users\user\source\repos\crud\crud\obj\Debug\crud.g.resources
+C:\Users\user\source\repos\crud\crud\obj\Debug\crud.Properties.Resources.resources
+C:\Users\user\source\repos\crud\crud\obj\Debug\crud.csproj.GenerateResource.cache
+C:\Users\user\source\repos\crud\crud\obj\Debug\crud.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\crud\crud\obj\Debug\crud.exe
+C:\Users\user\source\repos\crud\crud\obj\Debug\crud.pdb
