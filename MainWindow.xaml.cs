@@ -34,9 +34,55 @@ namespace crud
             
         }
 
+        public bool isValid()
+        {
+            if (name_txt.Text == string.Empty)
+            {
+                MessageBox.Show("введи имя","Faied", MessageBoxButton.OK, MessageBoxImage.Error);
+                return false;
+            }
+            if (age_txt.Text == string.Empty)
+            {
+                MessageBox.Show("введи возраст", "Faied", MessageBoxButton.OK, MessageBoxImage.Error);
+                return false;
+            }
+            if (city_txt.Text == string.Empty)
+            {
+                MessageBox.Show("введи город", "Faied", MessageBoxButton.OK, MessageBoxImage.Error);
+                return false;
+            }
+            if (gender_txt.Text == string.Empty)
+            {
+                MessageBox.Show("введи пол", "Faied", MessageBoxButton.OK, MessageBoxImage.Error);
+                return false;
+            }
+            return true;
+        }
+
         private void Insert_Click(object sender, RoutedEventArgs e)
         {
-            throw new NotImplementedException();
+            try
+            {
+                if (isValid())
+                {
+                    SqlCommand cmd = new SqlCommand("INSERT INTO FirstTable VALUES (@Name, @Age, @Gender, @City)", sqlConnection);
+                    cmd.CommandType = CommandType.Text;
+                    cmd.Parameters.AddWithValue("@Name", name_txt.Text);
+                    cmd.Parameters.AddWithValue("@Age", age_txt.Text);
+                    cmd.Parameters.AddWithValue("@Gender", gender_txt.Text);
+                    cmd.Parameters.AddWithValue("@City", city_txt.Text);
+                    sqlConnection.Open();
+                    cmd.ExecuteNonQuery();
+                    sqlConnection.Close();
+                    Load_Grid();
+                    MessageBox.Show("Successful", "Saved", MessageBoxButton.OK, MessageBoxImage.Information);
+                    ClearData();
+                }
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void ClearData() {
@@ -66,7 +112,7 @@ namespace crud
             sqlConnection.Open();
             SqlDataReader sdr = cmd.ExecuteReader();
             dt.Load(sdr);
-            //sqlConnection.Close();
+            sqlConnection.Close();
             dataGrid.ItemsSource = dt.DefaultView;
         }
     }
