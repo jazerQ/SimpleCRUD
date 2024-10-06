@@ -90,6 +90,7 @@ namespace crud
             age_txt.Clear();
             city_txt.Clear();
             gender_txt.Clear();
+            searchId.Clear();
         }
         private void Clear_Click(object sender, RoutedEventArgs e)
         {
@@ -114,6 +115,29 @@ namespace crud
             dt.Load(sdr);
             sqlConnection.Close();
             dataGrid.ItemsSource = dt.DefaultView;
+        }
+
+        private void delete_Click(object sender, RoutedEventArgs e)
+        {
+            sqlConnection.Open();
+            SqlCommand cmd = new SqlCommand($"delete from FirstTable where ID = {searchId.Text}", sqlConnection);
+            try
+            {
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Запись была удалена", "Saved", MessageBoxButton.OK, MessageBoxImage.Information);
+                //sqlConnection.Close();
+                ClearData();
+                Load_Grid();
+                sqlConnection.Close();
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                sqlConnection.Close();
+            }
         }
     }
 }
