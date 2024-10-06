@@ -139,5 +139,26 @@ namespace crud
                 sqlConnection.Close();
             }
         }
+
+        private void update_Click(object sender, RoutedEventArgs e)
+        {
+            sqlConnection.Open();
+            SqlCommand cmd = new SqlCommand($"update FirstTable set Name = '{name_txt.Text}', Age = '{age_txt.Text}', City = '{city_txt.Text}', Gender = '{gender_txt.Text}' WHERE ID = '{searchId.Text}'", sqlConnection);
+            try
+            {
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("успешно обновлена запись", "Saved", MessageBoxButton.OK,MessageBoxImage.Information);
+            }
+            catch(SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                sqlConnection.Close();
+                ClearData();
+                Load_Grid();
+            }
+        }
     }
 }
