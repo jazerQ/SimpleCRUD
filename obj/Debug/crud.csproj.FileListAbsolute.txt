@@ -13,3 +13,6 @@ C:\Users\user\source\repos\crud\crud\obj\Debug\crud.csproj.GenerateResource.cach
 C:\Users\user\source\repos\crud\crud\obj\Debug\crud.csproj.CoreCompileInputs.cache
 C:\Users\user\source\repos\crud\crud\obj\Debug\crud.exe
 C:\Users\user\source\repos\crud\crud\obj\Debug\crud.pdb
+C:\Users\user\source\repos\crud\crud\bin\Debug\Database1.mdf
+C:\Users\user\source\repos\crud\crud\bin\Debug\Database1_log.ldf
+C:\Users\user\source\repos\crud\crud\obj\Debug\crud_Content.g.cs

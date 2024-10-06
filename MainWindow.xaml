@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:crud"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
+    <Grid Margin="0,0,0,-16">
         <Label Content="C# CRUD WPF OPERATIONS" HorizontalAlignment="Left" Margin="140,55,0,0" VerticalAlignment="Top"/>
         <Label Content="Name" HorizontalAlignment="Left" Margin="116,191,0,0" VerticalAlignment="Top"/>
         <Label Content="Age" HorizontalAlignment="Left" Margin="121,254,0,0" VerticalAlignment="Top"/>
@@ -16,7 +16,7 @@
         <TextBox x:Name="name_txt" HorizontalAlignment="Left" Margin="196,204,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="age_txt" HorizontalAlignment="Left" Margin="196,258,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="gender_txt" HorizontalAlignment="Left" Margin="196,322,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
-        <DataGrid x:Name="dataGrid" d:ItemsSource="{d:SampleData ItemCount=0}" Margin="351,0,0,0"/>
+        <DataGrid x:Name="dataGrid" d:ItemsSource="{d:SampleData ItemCount=0}" Margin="351,0,0,26"/>
         <Button x:Name="insert" Content="Insert" HorizontalAlignment="Left" Margin="10,366,0,0" VerticalAlignment="Top" Height="58" Width="64"/>
         <Button x:Name="update" Content="Update" HorizontalAlignment="Left" Margin="94,366,0,0" VerticalAlignment="Top" Height="58" Width="64"/>
         <Button x:Name="delete" Content="Delete" HorizontalAlignment="Left" Margin="174,366,0,0" VerticalAlignment="Top" Height="58" Width="64"/>
